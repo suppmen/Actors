@@ -14,22 +14,27 @@ modal.addEventListener("click", () => {
 });
 
 function showData(e) {
-  console.log(e);
+  console.log(e.category);
   const template = document.querySelector("template").content;
   const clone = template.cloneNode(true);
+  let movie = "Pulp Fiction"
+  if(e.movie === movie){
+      const h2 = document.createElement("h2");
+    h2.textContent = e.movie;
+    clone.querySelector("h1 span ").textContent = e.fullname;
+    clone.querySelector("p span").textContent = e.movie;
 
-  clone.querySelector("h1 span ").textContent = e.fullname;
-  clone.querySelector("p span").textContent = e.movie;
+    clone.querySelector("button").addEventListener("click", showModal);
+    function showModal() {
+      console.log(e + "test");
+      modal.querySelector(".modal-name").textContent = e.fullname;
+      modal.querySelector("p").textContent = e.movie;
 
-  clone.querySelector("button").addEventListener("click", showModal);
-  function showModal() {
-    console.log(e + "test");
-    modal.querySelector(".modal-name").textContent = e.fullname;
-    modal.querySelector("p").textContent = e.movie;
+      modal.classList.remove("hide");
+    }
 
-    modal.classList.remove("hide");
+    let parent = document.querySelector("main");
+    parent.appendChild(clone);
   }
 
-  let parent = document.querySelector("main");
-  parent.appendChild(clone);
 }

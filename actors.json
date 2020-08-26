@@ -1,11 +1,13 @@
 [
     {
         "fullname": "Amanda Plummer",
-        "movie": "Pulp Fiction"
+        "movie": "Pulp Fiction",
+        "category": "aaa"
  },
     {
         "fullname": "Brad Pitt",
-        "movie": "Fight Club"
+        "movie": "Fight Club",
+        "category": "aaa"
  },
     {
         "fullname": "Bronagh Gallagher",
