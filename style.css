@@ -1,0 +1,81 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  padding: 1rem;
+  background: #f2efea;
+}
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  padding: 10px;
+  grid-column-gap: 2rem;
+  grid-row-gap: 5rem;
+}
+.box {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(128, 128, 128, 0.7);
+  padding: 1rem;
+}
+article {
+  text-align: center;
+}
+article h1 {
+  font-style: italic;
+  color: black;
+  font-size: 25px;
+  letter-spacing: 3px;
+}
+article span {
+  font-size: 20px;
+  color: darkgray;
+}
+
+.hide {
+  display: none;
+}
+.modal-background {
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.modal-content {
+  background-color: #fefefe;
+  border: 1px solid #7c1f17;
+  margin: 1em;
+  padding: 2em;
+}
+
+article p {
+  font-style: italic;
+  color: black;
+}
+
+article > button {
+  margin-top: auto;
+  background: white;
+  color: darkgray;
+  padding: 0.5rem;
+  border: 1px solid darkgray;
+  font-size: 1.2rem;
+  align-self: center;
+}
+
+article > button:hover {
+  background: rgba(128, 128, 128, 0.2);
+  color: white;
+  cursor: pointer;
+}
